@@ -8,7 +8,9 @@ import os
 
 def valida_url():
     global url_video
-    url_video = tb_url.get()
+    url_video = str(tb_url.get())
+    if 'www.youtube.com' not in url_video:
+        messagebox.showerror(message='Insira um link do youtube')
     #print(url_video)
 
 def ytdownloader():
